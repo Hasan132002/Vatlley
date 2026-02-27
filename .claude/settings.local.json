@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php -v:*)",
+      "Bash(wc:*)",
+      "Bash(done)",
+      "Bash(ls:*)",
+      "Bash(python fix_industry_colors.py:*)",
+      "Bash(python:*)",
+      "Bash(curl:*)"
+    ]
+  }
+}

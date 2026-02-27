@@ -1,0 +1,744 @@
+/**
+ * VettlyGlobal - Responsive Styles
+ * Mobile-first responsive design
+ */
+
+/* ========== Fix text color inside background-image sections ========== */
+/* Override heading/paragraph color rules so they inherit white from parent */
+[style*="background: url"] h1,
+[style*="background: url"] h2,
+[style*="background: url"] h3,
+[style*="background: url"] h4,
+[style*="background: url"] p,
+[style*="background: url"] li,
+[style*="background: url"] i,
+[style*="background: url"] span {
+    color: inherit;
+}
+
+/* ========== Fix circle icon containers in case study cards ========== */
+[style*="width: 60px"][style*="height: 60px"][style*="border-radius: 50%"] {
+    flex-shrink: 0;
+    min-width: 60px;
+    min-height: 60px;
+    aspect-ratio: 1;
+}
+
+/* ========== Mega Menu Styles ========== */
+.has-dropdown {
+    position: relative;
+}
+
+/* Industries Mega Menu Specific Styles */
+.industries-mega-menu {
+    min-width: 650px;
+    max-width: 700px;
+}
+
+/* Flash Message Styles */
+.flash-message {
+    position: fixed;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: 600px;
+    min-width: 320px;
+    padding: 14px 24px;
+    z-index: 10000;
+    animation: slideDown 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.flash-success {
+    background: #27ae60;
+    color: white;
+}
+
+.flash-error {
+    background: var(--accent-color);
+    color: white;
+}
+
+.flash-info {
+    background: var(--primary-color);
+    color: white;
+}
+
+.flash-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+}
+
+.flash-close {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    opacity: 0.8;
+    padding: 0 0 0 10px;
+    line-height: 1;
+}
+
+.flash-close:hover {
+    opacity: 1;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Footer Social */
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    color: white;
+    transition: var(--transition);
+}
+
+.footer-social a:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* ========== Tablet Styles ========== */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.75rem; }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    /* Adjust mega menu for tablets */
+    .mega-menu,
+    .industries-mega-menu {
+        min-width: 500px;
+        max-width: 90vw;
+    }
+
+    .about-mega-menu {
+        min-width: 700px;
+        max-width: 90vw;
+    }
+
+    .about-mega-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .nested-mega-menu {
+        max-width: 350px;
+        min-width: 300px;
+    }
+
+    .footer-widgets {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ========== Mobile Styles ========== */
+@media (max-width: 768px) {
+    /* Typography */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.25rem; }
+
+    p {
+        font-size: 1rem;
+    }
+
+    /* Header */
+    .header-top {
+        display: none;
+    }
+
+    .header-main {
+        padding: 12px 0;
+    }
+
+    .site-logo img {
+        height: 40px;
+    }
+
+    .site-logo-name {
+        font-size: 1.4rem;
+    }
+
+    .site-logo-tagline {
+        font-size: 0.65rem;
+    }
+
+    /* Mobile Menu Toggle - Show */
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    /* Hide Desktop Navigation */
+    .main-navigation {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 0 30px;
+        box-shadow: var(--shadow-xl);
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        z-index: 9999;
+    }
+
+    .main-navigation.active {
+        left: 0;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    .nav-menu > li {
+        width: 100%;
+    }
+
+    .nav-menu > li > a {
+        padding: 14px 20px;
+        border-radius: 0;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .nav-cta-btn {
+        margin: 20px;
+        width: calc(100% - 40px);
+        justify-content: center;
+    }
+
+    /* Mobile Mega Menu - Stacked Layout (hidden by default, toggled via JS) */
+    .mega-menu,
+    .dropdown-menu,
+    .about-mega-menu {
+        position: static;
+        box-shadow: none;
+        background: white;
+        width: 100%;
+        padding: 0;
+        min-width: auto;
+        max-width: 100%;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        border-radius: 0;
+        display: none;
+    }
+
+    .mega-menu.mobile-open,
+    .dropdown-menu.mobile-open,
+    .about-mega-menu.mobile-open {
+        display: block;
+        padding: 5px 0;
+        background: white;
+    }
+
+    .mega-menu-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .mega-menu-item {
+        border-bottom: none;
+    }
+
+    .mega-menu-item a,
+    .mega-menu-item .mega-menu-link {
+        padding: 10px 15px;
+        margin: 0;
+    }
+
+    /* Hide industry descriptions on mobile */
+    .mega-menu-link p {
+        display: none;
+    }
+
+    .dropdown-menu {
+        padding: 5px 0;
+    }
+
+    .dropdown-menu li a {
+        padding: 10px 20px;
+    }
+
+    /* Mobile About Mega Menu - Compact */
+    .about-mega-menu {
+        padding: 5px 10px;
+    }
+
+    .about-mega-grid {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .about-section-title {
+        font-size: 0.65rem;
+        margin-bottom: 4px;
+        padding: 6px 0 2px;
+        color: var(--text-light);
+    }
+
+    .about-items {
+        gap: 2px;
+    }
+
+    .about-card {
+        padding: 6px 8px;
+        gap: 8px;
+        border: none;
+    }
+
+    .about-card-icon {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+        border-radius: 4px;
+    }
+
+    .about-card-icon i {
+        font-size: 0.7rem;
+    }
+
+    .about-card-content h5 {
+        font-size: 0.82rem;
+    }
+
+    /* Hide descriptions on mobile to save space */
+    .about-card-content p {
+        display: none;
+    }
+
+    /* Mobile dropdown toggle indicator */
+    .dropdown-toggle .fa-chevron-down {
+        transition: transform 0.3s ease;
+        font-size: 0.7rem;
+        margin-left: auto;
+    }
+
+    .dropdown-toggle.mobile-expanded .fa-chevron-down {
+        transform: rotate(180deg);
+    }
+
+    /* Mobile submenu arrow rotation */
+    .mega-menu-item.has-submenu .submenu-arrow {
+        transition: transform 0.3s ease;
+    }
+
+    .mega-menu-item.has-submenu.mobile-expanded .submenu-arrow {
+        transform: rotate(90deg);
+        color: var(--primary-color);
+    }
+
+    /* Mobile Nested Menu */
+    .nested-mega-menu {
+        position: static;
+        margin-left: 0;
+        margin-top: 0;
+        min-width: auto;
+        box-shadow: none;
+        border-radius: 0;
+        background: rgba(0,0,0,0.03);
+        padding: 5px 10px;
+        display: none;
+    }
+
+    .nested-mega-menu.mobile-open {
+        display: block;
+    }
+
+    .nested-mega-content {
+        padding: 5px;
+    }
+
+    .nested-service-item {
+        padding: 8px 12px;
+    }
+
+    /* Hide mega menu overlay on mobile */
+    .mega-menu-overlay {
+        display: none !important;
+    }
+
+    /* Mobile Menu Overlay */
+    .mobile-menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 9998;
+        display: none;
+    }
+
+    .mobile-menu-overlay.active {
+        display: block;
+    }
+
+    /* Hero */
+    .hero-section {
+        padding: 60px 0 50px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Sections */
+    .section {
+        padding: 50px 0;
+    }
+
+    .section-sm {
+        padding: 40px 0;
+    }
+
+    .section-lg {
+        padding: 60px 0;
+    }
+
+    /* Footer */
+    .footer-widgets {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+    }
+}
+
+/* ========== Service/Industry Pages - Mobile Override ========== */
+@media (max-width: 768px) {
+
+    /* Page Hero - reduce padding and font sizes */
+    .page-hero {
+        padding: 60px 0 !important;
+    }
+
+    .page-hero h1 {
+        font-size: 1.8rem !important;
+        margin-bottom: 15px !important;
+    }
+
+    .page-hero p {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+
+    .page-hero .breadcrumbs {
+        font-size: 0.85rem !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* Force all inline grid layouts to single column on mobile */
+    [style*="grid-template-columns: 1fr 1fr"],
+    [style*="grid-template-columns:1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
+    }
+
+    [style*="grid-template-columns: repeat"] {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    /* Reduce inline large gaps */
+    [style*="gap: 50px"],
+    [style*="gap: 40px"],
+    [style*="gap: 35px"] {
+        gap: 25px !important;
+    }
+
+    /* Fix fixed-height elements */
+    [style*="height: 400px"],
+    [style*="height: 350px"],
+    [style*="height: 300px"] {
+        height: auto !important;
+        min-height: 200px !important;
+    }
+
+    /* Reduce large inline paddings on cards/boxes */
+    [style*="padding: 50px"],
+    [style*="padding: 40px"] {
+        padding: 20px !important;
+    }
+
+    [style*="padding: 35px"] {
+        padding: 18px !important;
+    }
+
+    /* Scale down inline large font sizes */
+    h3[style*="font-size: 1.8rem"],
+    h3[style*="font-size: 2rem"] {
+        font-size: 1.4rem !important;
+    }
+
+    h2[style*="font-size: 2.2rem"],
+    h2[style*="font-size: 2rem"] {
+        font-size: 1.6rem !important;
+    }
+
+    /* Section padding overrides for inline styles */
+    .section[style*="padding: 80px"],
+    .section[style*="padding: 100px"] {
+        padding: 50px 0 !important;
+    }
+
+    /* Fix inline flex buttons/CTA sections */
+    [style*="display: flex"][style*="gap: 20px"][style*="justify-content: center"] {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* Scale down large placeholder icons */
+    [style*="font-size: 80px"] {
+        font-size: 50px !important;
+    }
+
+    /* Responsive case study / card circle icons */
+    [style*="width: 60px"][style*="height: 60px"][style*="border-radius: 50%"] {
+        width: 45px !important;
+        height: 45px !important;
+        font-size: 1.1rem !important;
+    }
+
+    /* CTA section buttons */
+    .cta-box .btn,
+    [style*="border-radius: 50px"][style*="padding: 15px 40px"],
+    [style*="border-radius: 50px"][style*="padding: 13px 38px"] {
+        padding: 12px 28px !important;
+        font-size: 0.95rem !important;
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    /* Blockquote on mobile */
+    blockquote {
+        padding-left: 15px !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* Section header responsive */
+    .section-header h2 {
+        font-size: 1.6rem !important;
+    }
+
+    .section-header p {
+        font-size: 0.95rem !important;
+    }
+
+    /* CTA box text */
+    .cta-box h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .cta-box p {
+        font-size: 1rem !important;
+    }
+}
+
+/* ========== Small Mobile ========== */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.5rem; }
+
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    /* Smaller mega menu elements on small mobile */
+    .mega-menu-item i {
+        font-size: 1.1rem;
+        min-width: 28px;
+    }
+
+    .mega-menu-item h4 {
+        font-size: 0.95rem;
+    }
+
+    .mega-menu-item p {
+        font-size: 0.8rem;
+    }
+
+    .about-card {
+        padding: 8px;
+        gap: 10px;
+    }
+
+    .about-card-icon {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+    }
+
+    .about-card-icon i {
+        font-size: 0.85rem;
+    }
+
+    .about-card-content h5 {
+        font-size: 0.85rem;
+    }
+
+    .about-card-content p {
+        font-size: 0.75rem;
+    }
+
+    .nested-service-item {
+        padding: 8px 10px;
+    }
+
+    .nested-service-item i {
+        font-size: 0.9rem;
+        width: 18px;
+    }
+
+    .nested-service-item span {
+        font-size: 0.85rem;
+    }
+}
+
+/* ========== Desktop Large Screens - Prevent Mega Menu Overflow ========== */
+@media (min-width: 1025px) {
+    /* Ensure mega menus don't overflow on large screens */
+    .mega-menu {
+        max-width: min(50vw, 800px);
+    }
+
+    .industries-mega-menu {
+        max-width: min(600px, 45vw);
+    }
+
+    .about-mega-menu {
+        max-width: min(800px, 60vw);
+    }
+
+    /* Ensure nested menu stays within viewport */
+    .nested-mega-menu {
+        max-width: 400px;
+    }
+
+    /* Prevent right edge overflow */
+    .has-dropdown:nth-last-child(-n+2) .mega-menu {
+        left: auto;
+        right: 0;
+        transform: none;
+    }
+
+    .has-dropdown:nth-last-child(-n+2) .about-mega-menu {
+        left: auto;
+        right: -50%;
+        transform: translateX(0);
+    }
+}
+
+
+/* ========== Additional Mega Menu UX Improvements ========== */
+/* Hover delay managed by JS in main.js */
+
+/* Ensure submenu arrow visibility */
+.submenu-arrow {
+    margin-left: auto;
+    padding-left: 10px;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.mega-menu-item.has-submenu:hover .submenu-arrow {
+    opacity: 1;
+    color: var(--primary-color);
+    transform: translateX(3px);
+}
+
+/* Focus states for accessibility */
+/* .has-dropdown a:focus,
+.mega-menu-item a:focus,
+.nested-service-item:focus,
+.about-card:focus,
+.dropdown-menu li a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+} */
+
+/* Prevent edge overflow on large screens */
+@media (min-width: 1025px) {
+    /* Keep menus within viewport */
+    .has-dropdown:nth-last-child(-n+2) .mega-menu,
+    .has-dropdown:nth-last-child(-n+2) .dropdown-menu {
+        left: auto;
+        right: 0;
+        transform: translateX(0);
+    }
+
+    .has-dropdown:nth-last-child(-n+2) .about-mega-menu {
+        left: auto;
+        right: -50%;
+        transform: translateX(0);
+    }
+}
