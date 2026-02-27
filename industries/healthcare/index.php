@@ -78,8 +78,8 @@ $services = [
 ?>
 
 <!-- Page Header / Hero -->
-<section class="page-hero" style="background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; padding: 100px 0; color: white;">
-    <div class="container">
+<section class="page-hero">
+    <div class="container" style="position: relative; z-index: 1;">
         <div class="hero-content" style="max-width: 800px;">
             <div class="breadcrumbs" style="margin-bottom: 20px; opacity: 0.9;">
                 <a href="<?php echo url(); ?>" style="color: white;">Home</a>
@@ -198,6 +198,20 @@ $services = [
 </section>
 
 <style>
+/* Hero */
+.page-hero {
+    background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat;
+    padding: 100px 0;
+    color: white;
+    position: relative;
+}
+.page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(13,43,78,0.92) 0%, rgba(5,130,189,0.85) 100%);
+}
+
 .industry-layout {
     display: grid;
     grid-template-columns: 280px 1fr;
@@ -305,7 +319,7 @@ $services = [
 /* Services Grid */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 }
 
@@ -327,7 +341,7 @@ $services = [
 .service-icon {
     width: 60px;
     height: 60px;
-    background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -414,7 +428,7 @@ $services = [
     }
 
     .services-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -426,6 +440,10 @@ $services = [
     .sidebar-nav a {
         font-size: 0.9rem;
         padding: 8px 12px;
+    }
+
+    .page-hero h1 {
+        font-size: 2rem !important;
     }
 }
 </style>

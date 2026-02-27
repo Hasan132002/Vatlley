@@ -26,7 +26,7 @@ $whitepapers = [
         'published_date' => '2026-02-01',
         'downloads' => 1547,
         'thumbnail' => 'The-Future-of-Identity-Verification-in-Digital-Banking.jpg',
-        'file_url' => '/VattleyGlobal/contact/?inquiry=whitepaper',
+        'file_url' => url('contact/?inquiry=whitepaper'),
         'featured' => true
     ],
     [
@@ -40,7 +40,7 @@ $whitepapers = [
         'published_date' => '2026-01-15',
         'downloads' => 2103,
         'thumbnail' => 'Healthcare-Data-Security-A-Comprehensive-Guide.jpg',
-        'file_url' => '/VattleyGlobal/contact/?inquiry=whitepaper',
+        'file_url' => url('contact/?inquiry=whitepaper'),
         'featured' => true
     ],
     [
@@ -54,7 +54,7 @@ $whitepapers = [
         'published_date' => '2025-12-20',
         'downloads' => 1823,
         'thumbnail' => 'AI-Powered-Fraud-Detection-Strategies.jpg',
-        'file_url' => '/VattleyGlobal/contact/?inquiry=whitepaper',
+        'file_url' => url('contact/?inquiry=whitepaper'),
         'featured' => false
     ],
     [
@@ -68,7 +68,7 @@ $whitepapers = [
         'published_date' => '2025-11-30',
         'downloads' => 1654,
         'thumbnail' => 'AML-Compliance-in-the-Digital-Age.jpg',
-        'file_url' => '/VattleyGlobal/contact/?inquiry=whitepaper',
+        'file_url' => url('contact/?inquiry=whitepaper'),
         'featured' => false
     ],
     [
@@ -82,7 +82,7 @@ $whitepapers = [
         'published_date' => '2025-11-10',
         'downloads' => 1432,
         'thumbnail' => 'Insurance-Analytics-Driving-Better-Outcomes.jpg',
-        'file_url' => '/VattleyGlobal/contact/?inquiry=whitepaper',
+        'file_url' => url('contact/?inquiry=whitepaper'),
         'featured' => false
     ],
     [
@@ -96,7 +96,7 @@ $whitepapers = [
         'published_date' => '2025-10-25',
         'downloads' => 1876,
         'thumbnail' => 'KYC-Best-Practices-for-Financial-Institutions.jpg',
-        'file_url' => '/VattleyGlobal/contact/?inquiry=whitepaper',
+        'file_url' => url('contact/?inquiry=whitepaper'),
         'featured' => false
     ],
     [
@@ -110,7 +110,7 @@ $whitepapers = [
         'published_date' => '2025-10-05',
         'downloads' => 987,
         'thumbnail' => 'Government-Data-Quality-and-Integrity.jpg',
-        'file_url' => '/VattleyGlobal/contact/?inquiry=whitepaper',
+        'file_url' => url('contact/?inquiry=whitepaper'),
         'featured' => false
     ],
     [
@@ -124,7 +124,7 @@ $whitepapers = [
         'published_date' => '2025-09-20',
         'downloads' => 2210,
         'thumbnail' => 'Credit-Risk-Management-in-2026.jpg',
-        'file_url' => '/VattleyGlobal/contact/?inquiry=whitepaper',
+        'file_url' => url('contact/?inquiry=whitepaper'),
         'featured' => false
     ],
     [
@@ -138,7 +138,7 @@ $whitepapers = [
         'published_date' => '2025-09-01',
         'downloads' => 1345,
         'thumbnail' => 'Telematics-and-Insurance-The-Connected-Future.jpg',
-        'file_url' => '/VattleyGlobal/contact/?inquiry=whitepaper',
+        'file_url' => url('contact/?inquiry=whitepaper'),
         'featured' => false
     ]
 ];
@@ -231,7 +231,7 @@ include '../../includes/header.php';
                         <div class="whitepaper-meta">
                             <span><i class="far fa-file"></i> <?php echo $whitepaper['pages']; ?> pages</span>
                             <span><i class="far fa-calendar"></i> <?php echo date('M Y', strtotime($whitepaper['published_date'])); ?></span>
-                            <span><i class="fas fa-download"></i> <?php echo number_format($whitepaper['downloads']); ?> downloads</span>
+                            <span><i class="fas fa-eye"></i> <?php echo number_format($whitepaper['downloads']); ?> reads</span>
                         </div>
                         <div style="display: flex; gap: 10px;">
                             <a class="read-more-link btn btn-outline" href="<?php echo url('resources/whitepapers/' . $whitepaper['slug']); ?>" style="flex: 1;">
@@ -289,7 +289,7 @@ include '../../includes/header.php';
                         <div class="whitepaper-footer">
                             <div class="whitepaper-stats">
                                 <span><i class="far fa-file"></i> <?php echo $whitepaper['pages']; ?>p</span>
-                                <span><i class="fas fa-download"></i> <?php echo number_format($whitepaper['downloads']); ?></span>
+                                <span><i class="fas fa-eye"></i> <?php echo number_format($whitepaper['downloads']); ?></span>
                             </div>
                             <a href="<?php echo url('contact'); ?>" class="btn btn-outline btn-sm">
                                 <i class="fas fa-envelope"></i>
@@ -318,8 +318,9 @@ include '../../includes/header.php';
             </div>
             <h2>Get New Whitepapers Delivered</h2>
             <p>Subscribe to receive notifications when we publish new research and insights</p>
-            <form class="newsletter-form-inline" method="POST" action="<?php echo url('resources/blog/newsletter-subscribe'); ?>">
+            <form class="newsletter-form-inline" method="POST" action="<?php echo url('resources/blog/newsletter-subscribe'); ?>" data-validate>
                 <?php echo csrf_field(); ?>
+                <input type="hidden" name="redirect_url" value="<?php echo current_url(); ?>">
                 <input type="email" name="email" placeholder="Enter your email address" required>
                 <button type="submit" class="btn btn-secondary">
                     <i class="fas fa-paper-plane"></i>
@@ -358,7 +359,7 @@ include '../../includes/header.php';
 
 .newsletter-section {
     padding: 80px 0;
-    background: url(http://localhost/VattleyGlobal/assets/images/get-started.jpg) center center / cover no-repeat;
+    background: url('<?php echo ASSETS_URL; ?>/images/get-started.jpg') center center / cover no-repeat;
     color: white;
     text-align: center;
     position: relative;
@@ -476,7 +477,7 @@ include '../../includes/header.php';
 .filter-select:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    box-shadow: 0 0 0 3px rgba(5, 130, 189, 0.1);
 }
 
 /* Section Header */

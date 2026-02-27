@@ -4,11 +4,12 @@
  */
 
 // Create connection
-$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+$conn = @new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 // Check connection
 if ($conn->connect_error) {
-    die("Database Connection Failed: " . $conn->connect_error);
+    error_log("Database Connection Failed: " . $conn->connect_error);
+    die("Service temporarily unavailable. Please try again later.");
 }
 
 // Set charset to UTF-8

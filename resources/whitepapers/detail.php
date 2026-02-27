@@ -47,7 +47,7 @@ $whitepapers_data = [
             'Regulatory compliance costs decreased by 40% with automated verification systems',
             'Customer satisfaction scores improved by 65% with streamlined digital verification'
         ],
-        'file_url' => '/VattleyGlobal/contact/?inquiry=whitepaper',
+        'file_url' => url('contact/?inquiry=whitepaper'),
         'file_size' => '2.8 MB',
         'image' => 'The-Future-of-Identity-Verification-in-Digital-Banking.jpg'
     ],
@@ -85,7 +85,7 @@ $whitepapers_data = [
             'Multi-factor authentication blocks 99.9% of automated attacks',
             'Regular security audits identify vulnerabilities before they can be exploited'
         ],
-        'file_url' => '/VattleyGlobal/contact/?inquiry=whitepaper',
+        'file_url' => url('contact/?inquiry=whitepaper'),
         'file_size' => '3.5 MB',
         'image' => 'Healthcare-Data-Security-A-Comprehensive-Guide.jpg'
     ],
@@ -123,7 +123,7 @@ $whitepapers_data = [
             'Real-time AI monitoring prevents fraud before transactions complete',
             'Adaptive algorithms continuously improve detection accuracy over time'
         ],
-        'file_url' => '/VattleyGlobal/contact/?inquiry=whitepaper',
+        'file_url' => url('contact/?inquiry=whitepaper'),
         'file_size' => '2.9 MB',
         'image' => 'AI-Powered-Fraud-Detection-Strategies.jpg'
     ],
@@ -161,7 +161,7 @@ $whitepapers_data = [
             'Integrated solutions reduce compliance costs by 30-40%',
             'Proper AML programs protect reputation and enable business growth'
         ],
-        'file_url' => '/VattleyGlobal/contact/?inquiry=whitepaper',
+        'file_url' => url('contact/?inquiry=whitepaper'),
         'file_size' => '3.8 MB',
         'image' => 'AML-Compliance-in-the-Digital-Age.jpg'
     ],
@@ -199,7 +199,7 @@ $whitepapers_data = [
             'Customer retention improves 35% with analytics-driven engagement',
             'Data-driven insurers achieve 20% higher profit margins'
         ],
-        'file_url' => '/VattleyGlobal/contact/?inquiry=whitepaper',
+        'file_url' => url('contact/?inquiry=whitepaper'),
         'file_size' => '2.2 MB',
         'image' => 'Insurance-Analytics-Driving-Better-Outcomes.jpg'
     ],
@@ -237,7 +237,7 @@ $whitepapers_data = [
             'Continuous monitoring catches 3x more suspicious activities than periodic reviews',
             'Integrated KYC platforms reduce compliance costs by 35%'
         ],
-        'file_url' => '/VattleyGlobal/contact/?inquiry=whitepaper',
+        'file_url' => url('contact/?inquiry=whitepaper'),
         'file_size' => '3.1 MB',
         'image' => 'KYC-Best-Practices-for-Financial-Institutions.jpg'
     ],
@@ -275,7 +275,7 @@ $whitepapers_data = [
             'Standardized data formats reduce integration costs by 40%',
             'Data governance programs improve public trust and transparency'
         ],
-        'file_url' => '/VattleyGlobal/contact/?inquiry=whitepaper',
+        'file_url' => url('contact/?inquiry=whitepaper'),
         'file_size' => '2.7 MB',
         'image' => 'Government-Data-Quality-and-Integrity.jpg'
     ],
@@ -313,7 +313,7 @@ $whitepapers_data = [
             'Automated decisioning reduces credit approval time by 80%',
             'Modern risk frameworks balance growth with prudent risk management'
         ],
-        'file_url' => '/VattleyGlobal/contact/?inquiry=whitepaper',
+        'file_url' => url('contact/?inquiry=whitepaper'),
         'file_size' => '3.6 MB',
         'image' => 'Credit-Risk-Management-in-2026.jpg'
     ],
@@ -351,7 +351,7 @@ $whitepapers_data = [
             'Driving behavior feedback reduces risky driving incidents by 30%',
             'Connected vehicle data enables proactive risk management'
         ],
-        'file_url' => '/VattleyGlobal/contact/?inquiry=whitepaper',
+        'file_url' => url('contact/?inquiry=whitepaper'),
         'file_size' => '2.4 MB',
         'image' => 'Telematics-and-Insurance-The-Connected-Future.jpg'
     ]
@@ -432,7 +432,7 @@ include '../../includes/header.php';
             </div>
 
             <div class="hero-actions">
-                <a href="<?php echo url('contact'); ?>" class="btn btn-outline btn-sm">
+                <a href="<?php echo url('contact'); ?>" class="btn btn-outline-white btn-sm">
                                 <i class="fas fa-envelope"></i>
                                 Contact Us
                             </a>
@@ -552,8 +552,9 @@ include '../../includes/header.php';
                     </div>
                     <h3>Stay Updated</h3>
                     <p>Get notified when we publish new whitepapers and research</p>
-                    <form class="newsletter-form" method="POST" action="<?php echo url('resources/blog/newsletter-subscribe'); ?>">
+                    <form class="newsletter-form" method="POST" action="<?php echo url('resources/blog/newsletter-subscribe'); ?>" data-validate>
                         <?php echo csrf_field(); ?>
+                        <input type="hidden" name="redirect_url" value="<?php echo current_url(); ?>">
                         <input type="email" name="email" placeholder="Your email address" required>
                         <button type="submit" class="btn btn-secondary btn-block">
                             <i class="fas fa-paper-plane"></i>
@@ -564,10 +565,13 @@ include '../../includes/header.php';
 
                 <!-- Contact CTA -->
                 <div class="sidebar-card contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
                     <h3>Need Expert Guidance?</h3>
                     <p>Our team can help you implement the strategies discussed in this whitepaper</p>
-                    <a href="<?php echo url('contact'); ?>" class="btn btn-outline btn-block">
-                        <i class="fas fa-comments"></i>
+                    <a href="<?php echo url('contact'); ?>" class="btn btn-secondary btn-block">
+                        <i class="fas fa-envelope"></i>
                         Contact Us
                     </a>
                 </div>
@@ -1002,9 +1006,19 @@ include '../../includes/header.php';
     border-color: var(--primary-color);
 }
 
+.contact-card {
+    text-align: center;
+}
+
+.contact-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
 .contact-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 12px;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
 }
 
 .contact-card p {
@@ -1115,6 +1129,22 @@ include '../../includes/header.php';
 
 .related-meta i {
     margin-right: 5px;
+}
+
+/* Fix btn-outline on white backgrounds */
+.contact-card .btn-outline,
+.related-card .btn-outline,
+.sidebar-card .btn-outline {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.contact-card .btn-outline:hover,
+.related-card .btn-outline:hover,
+.sidebar-card .btn-outline:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
 }
 
 /* Responsive */

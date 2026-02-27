@@ -180,20 +180,18 @@ include '../../includes/header.php';
 </section>
 
 <!-- CTA Section -->
-<section class="section">
+<section class="cta-section">
     <div class="container">
-        <div class="cta-box" style="text-align: center; max-width: 800px; margin: 0 auto; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; padding: 60px 40px; border-radius: 12px; color: white;">
-            <h2 style="color: white; margin-bottom: 20px;">Accelerate Life Insurance Operations</h2>
-            <p style="font-size: 1.15rem; margin-bottom: 35px; color: rgba(255,255,255,0.95);">
-                Reduce underwriting time from weeks to days with intelligent automation and fraud detection.
-            </p>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="<?php echo url('contact'); ?>" class="btn" style="background: white; color: var(--primary-color); padding: 12px 35px; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-                    <i class="fas fa-comments"></i>
+        <div class="cta-content">
+            <h2>Accelerate Life Insurance Operations</h2>
+            <p>Reduce underwriting time from weeks to days with intelligent automation and fraud detection.</p>
+            <div class="cta-buttons">
+                <a href="<?php echo url('contact'); ?>" class="btn btn-white btn-lg">
+                    <i class="fas fa-comments" style="margin-right: 8px;"></i>
                     Schedule Demo
                 </a>
-                <a href="<?php echo url('resources'); ?>" class="btn" style="background: transparent; color: white; border: 2px solid white; padding: 10px 35px; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-                    <i class="fas fa-book"></i>
+                <a href="<?php echo url('resources'); ?>" class="btn btn-outline-white btn-lg">
+                    <i class="fas fa-book" style="margin-right: 8px;"></i>
                     View Case Study
                 </a>
             </div>

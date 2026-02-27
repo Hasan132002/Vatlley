@@ -4,22 +4,35 @@
  * All site-wide settings and constants
  */
 
-// Error Reporting (Development Mode)
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+// Error Reporting
+// Development: E_ALL with display_errors = 1
+// Production:  0 with display_errors = 0
+error_reporting(0);
+ini_set('display_errors', 0);
 
 // Timezone
 date_default_timezone_set('America/New_York');
 
 // Database Configuration
 define('DB_HOST', 'localhost');
-define('DB_USER', 'vettlyuser');
-define('DB_PASS', 'StrongPassword123!');
-define('DB_NAME', 'vettlyglobal');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'vettlyglobal_db');
+
+// === DEPLOYMENT SETTINGS ===
+// SITE_PATH: Change based on your deployment
+//   Local (XAMPP):      '/VattleyGlobal'
+//   Live (root domain): ''
+define('SITE_PATH', '/');
+
 // Site Configuration
 define('SITE_NAME', 'VettlyGlobal');
 define('SITE_TAGLINE', 'Risk Solutions & Intelligence');
-define('BASE_URL', 'https://vettlyglobal.com');
+
+// Auto-detect BASE_URL from server
+$_protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+$_host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'localhost';
+define('BASE_URL', $_protocol . '://' . $_host . SITE_PATH);
 define('ASSETS_URL', BASE_URL . '/assets');
 
 // Contact Information
@@ -64,8 +77,8 @@ define('POSTS_PER_PAGE', 12);
 define('MAX_FILE_SIZE', 5242880); // 5MB
 define('ALLOWED_IMAGE_TYPES', ['image/jpeg', 'image/png', 'image/gif', 'image/webp']);
 
-// Google Analytics (Add your tracking ID)
-define('GOOGLE_ANALYTICS_ID', 'UA-XXXXXXXXX-X');
+// DEPLOYMENT: Replace with your actual GA tracking ID (e.g., 'G-XXXXXXXXXX')
+define('GOOGLE_ANALYTICS_ID', '');
 
 // reCAPTCHA (Add your keys if using)
 define('RECAPTCHA_SITE_KEY', '');

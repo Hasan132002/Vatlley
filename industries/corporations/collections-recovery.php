@@ -391,19 +391,17 @@ include '../../includes/header.php';
 </section>
 
 <!-- CTA Section -->
-<section class="section" style="background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; padding: 80px 0; color: white;">
+<section class="cta-section">
     <div class="container">
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <h2 style="font-size: 2.2rem; margin-bottom: 25px;">Ready to Optimize Your Collections?</h2>
-            <p style="font-size: 1.15rem; margin-bottom: 40px; opacity: 0.95;">
-                Discover how VettlyGlobal's collections solutions can help you improve recovery rates, reduce costs, and ensure regulatory compliance.
-            </p>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="<?php echo url('contact'); ?>" class="btn btn-primary btn-lg" style="background: white; color: var(--primary-color); border: none;">
+        <div class="cta-content">
+            <h2>Ready to Optimize Your Collections?</h2>
+            <p>Discover how VettlyGlobal's collections solutions can help you improve recovery rates, reduce costs, and ensure regulatory compliance.</p>
+            <div class="cta-buttons">
+                <a href="<?php echo url('contact'); ?>" class="btn btn-white btn-lg">
                     <i class="fas fa-comments" style="margin-right: 8px;"></i>
-                    Schedule Consultation
+                    Contact Us
                 </a>
-                <a href="<?php echo url('resources'); ?>" class="btn btn-secondary btn-lg" style="background: transparent; border: 2px solid white; color: white;">
+                <a href="<?php echo url('resources'); ?>" class="btn btn-outline-white btn-lg">
                     <i class="fas fa-book" style="margin-right: 8px;"></i>
                     View Resources
                 </a>
@@ -435,15 +433,6 @@ include '../../includes/header.php';
     display: inline-flex;
     align-items: center;
     transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(74, 144, 226, 0.3);
-}
-
-.btn-secondary:hover {
-    background: rgba(74, 144, 226, 0.1);
 }
 
 @media (max-width: 768px) {

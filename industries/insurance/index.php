@@ -35,8 +35,8 @@ $secondary_color = 'var(--primary-color)';
 ?>
 
 <!-- Page Hero -->
-<section class="page-hero" style="background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; padding: 100px 0; color: white;">
-    <div class="container">
+<section class="page-hero">
+    <div class="container" style="position: relative; z-index: 1;">
         <div class="hero-content" style="max-width: 800px;">
             <div class="breadcrumbs" style="margin-bottom: 20px; opacity: 0.9;">
                 <a href="<?php echo url(); ?>" style="color: white;">Home</a>
@@ -91,7 +91,7 @@ $secondary_color = 'var(--primary-color)';
                     <div class="services-grid">
                         <?php foreach ($services as $service): ?>
                         <div class="service-card">
-                            <div class="service-icon" style="background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat;">
+                            <div class="service-icon">
                                 <i class="fas <?php echo $service['icon']; ?>"></i>
                             </div>
                             <h3><?php echo $service['name']; ?></h3>
@@ -117,6 +117,19 @@ $secondary_color = 'var(--primary-color)';
 </section>
 
 <style>
+/* Hero */
+.page-hero {
+    background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat;
+    padding: 100px 0;
+    color: white;
+    position: relative;
+}
+.page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(13,43,78,0.92) 0%, rgba(5,130,189,0.85) 100%);
+}
 .industry-layout{display:grid;grid-template-columns:280px 1fr;gap:40px;margin-top:40px}
 .industry-sidebar{position:relative}
 .sidebar-content{position:sticky;top:100px;background:white;border-radius:12px;box-shadow:var(--shadow-md);padding:25px}
@@ -134,10 +147,10 @@ $secondary_color = 'var(--primary-color)';
 .industry-main{min-width:0}
 .content-section{margin-bottom:50px}
 .content-section h2{margin-bottom:20px;color:var(--text-primary)}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:25px}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
 .service-card{background:white;padding:30px;border-radius:12px;box-shadow:var(--shadow-md);transition:var(--transition);border:2px solid transparent}
 .service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-xl);border-color:<?php echo $primary_color; ?>}
-.service-icon{width:60px;height:60px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.service-icon{width:60px;height:60px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;background:linear-gradient(135deg, var(--primary-color), var(--primary-dark))}
 .service-icon i{font-size:1.8rem;color:white}
 .service-card h3{font-size:1.2rem;margin-bottom:12px;color:var(--text-primary)}
 .service-card p{color:var(--text-secondary);font-size:0.95rem;line-height:1.6;margin-bottom:20px}
@@ -149,8 +162,8 @@ $secondary_color = 'var(--primary-color)';
 .benefit-item i{font-size:1.5rem;margin-top:5px}
 .benefit-item h4{font-size:1.1rem;margin-bottom:5px;color:var(--text-primary)}
 .benefit-item p{color:var(--text-secondary);font-size:0.95rem;margin:0}
-@media(max-width:992px){.industry-layout{grid-template-columns:1fr;gap:30px}.sidebar-content{position:static}.services-grid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}}
-@media(max-width:768px){.services-grid{grid-template-columns:1fr}.sidebar-nav a{font-size:0.9rem;padding:8px 12px}}
+@media(max-width:992px){.industry-layout{grid-template-columns:1fr;gap:30px}.sidebar-content{position:static}.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.services-grid{grid-template-columns:1fr}.sidebar-nav a{font-size:0.9rem;padding:8px 12px}.page-hero h1{font-size:2rem !important}}
 </style>
 
 <?php include '../../includes/footer.php'; ?>

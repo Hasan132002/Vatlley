@@ -28,7 +28,7 @@ include '../../includes/header.php';
             </div>
             <h1 style="color: white; font-size: 2.2rem; margin-bottom: 18px; font-weight: 700;">Collections Compliance Solutions</h1>
             <p style="color: rgba(255,255,255,0.95); font-size: 1.1rem; line-height: 1.7; margin-bottom: 25px;">Comply with FDCPA, TCPA, and state regulations with automated monitoring, audit trails, and compliance workflows. Reduce risk while maintaining collection effectiveness.</p>
-            <a href="<?php echo url('contact'); ?>" class="btn btn-light btn-lg" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: var(--primary-color); font-weight: 600;">
+            <a href="<?php echo url('contact'); ?>" class="btn btn-white btn-lg">
                 <i class="fas fa-envelope"></i> Contact Us
             </a>
         </div>
@@ -218,15 +218,17 @@ include '../../includes/header.php';
 </section>
 
 <!-- CTA Section -->
-<section class="section" style="background: url('<?php echo ASSETS_URL; ?>/images/cyber-security-img.jpg') center center / cover no-repeat fixed; position: relative;">
-    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6);"></div>
-    <div class="container" style="position: relative; z-index: 1;">
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <h2 style="color: white; font-size: 1.8rem; margin-bottom: 15px;">Ensure Compliance Today</h2>
-            <p style="font-size: 1.05rem; margin-bottom: 25px; color: rgba(255,255,255,0.95);">Transform your collections compliance with VettlyGlobal's comprehensive solutions.</p>
-            <a href="<?php echo url('contact'); ?>" class="btn" style="background: white; color: var(--primary-color); font-weight: 600; padding: 12px 32px; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-                <i class="fas fa-envelope"></i> Contact Us
-            </a>
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ensure Compliance Today</h2>
+            <p>Transform your collections compliance with VettlyGlobal's comprehensive solutions.</p>
+            <div class="cta-buttons">
+                <a href="<?php echo url('contact'); ?>" class="btn btn-white btn-lg">
+                    <i class="fas fa-envelope" style="margin-right: 8px;"></i>
+                    Contact Us
+                </a>
+            </div>
         </div>
     </div>
 </section>

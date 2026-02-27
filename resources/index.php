@@ -94,12 +94,19 @@ include '../includes/header.php';
     </div>
 </section>
 
-<!-- CTA -->
-<section style="background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); padding: 60px 0; text-align: center;">
+<!-- CTA Section -->
+<section class="cta-section">
     <div class="container">
-        <h2 style="color: white; font-size: 2.5rem; margin-bottom: 15px;">Need Help Finding the Right Resource?</h2>
-        <p style="color: rgba(255,255,255,0.95); font-size: 1.2rem; margin-bottom: 30px;">Our team is here to help you find the information you need.</p>
-        <a href="<?php echo url('contact'); ?>" class="btn btn-primary" style="background: white; color: var(--primary-color);">Contact Us</a>
+        <div class="cta-content">
+            <h2>Need Help Finding the Right Resource?</h2>
+            <p>Our team is here to help you find the information you need.</p>
+            <div class="cta-buttons">
+                <a href="<?php echo url('contact'); ?>" class="btn btn-white btn-lg">
+                    <i class="fas fa-comments" style="margin-right: 8px;"></i>
+                    Contact Us
+                </a>
+            </div>
+        </div>
     </div>
 </section>
 

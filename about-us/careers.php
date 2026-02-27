@@ -28,7 +28,7 @@ include '../includes/header.php';
             <p style="color: rgba(255,255,255,0.95); font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">
                 Join a team of innovators shaping the future of risk solutions and data intelligence.
             </p>
-            <a href="<?php echo url('contact'); ?>?inquiry=careers" class="btn btn-primary btn-lg" style="background: white; color: var(--primary-color); border: none; font-weight: 600;">
+            <a href="<?php echo url('contact'); ?>?inquiry=careers" class="btn btn-white btn-lg">
                 <i class="fas fa-paper-plane" style="margin-right: 8px;"></i>
                 Apply Now
             </a>

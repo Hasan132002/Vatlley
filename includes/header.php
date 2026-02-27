@@ -19,7 +19,7 @@
     <meta property="og:site_name" content="<?php echo SITE_NAME; ?>">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="<?php echo asset('images/logo/favicon.png'); ?>">
+    <link rel="icon" type="image/png" href="<?php echo asset('images/logo/fav-icon.png'); ?>">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -77,7 +77,7 @@
             <div class="header-main-content">
                 <!-- Logo -->
                 <a href="<?php echo url(); ?>" class="site-logo">
-                    <img src="<?php echo asset('images/logo/logo.svg'); ?>" alt="<?php echo SITE_NAME; ?> Logo">
+                    <img src="<?php echo asset('images/logo/logo.png'); ?>" alt="<?php echo SITE_NAME; ?> Logo">
                     <div class="site-logo-text">
                         <!-- <span class="site-logo-name"><?php echo SITE_NAME; ?></span> -->
                         <!-- <span class="site-logo-tagline"><?php echo SITE_TAGLINE; ?></span> -->

@@ -47,7 +47,7 @@ include '../../includes/header.php';
             </p>
             <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
                 <span style="opacity: 0.9;"><i class="far fa-calendar"></i> February 10, 2026</span>
-                <a href="<?php echo url('about-us/press-room/series-c-funding'); ?>" class="btn" style="background: white; color: var(--primary-color);">Read Full Release</a>
+                <a href="<?php echo url('about-us/press-room/series-c-funding'); ?>" class="btn btn-white">Read Full Release</a>
             </div>
         </div>
 
@@ -212,8 +212,9 @@ include '../../includes/header.php';
             <p style="font-size: 1.15rem; margin-bottom: 35px;">
                 Stay informed about the latest VettlyGlobal news and announcements.
             </p>
-            <form method="POST" action="<?php echo url('resources/blog/newsletter-subscribe'); ?>" style="display: flex; gap: 15px; max-width: 500px; margin: 0 auto; flex-wrap: wrap;">
+            <form method="POST" action="<?php echo url('resources/blog/newsletter-subscribe'); ?>" data-validate style="display: flex; gap: 15px; max-width: 500px; margin: 0 auto; flex-wrap: wrap;">
                 <?php echo csrf_field(); ?>
+                <input type="hidden" name="redirect_url" value="<?php echo current_url(); ?>">
                 <input type="email" name="email" placeholder="Enter your email" required style="flex: 1; min-width: 250px; padding: 15px 20px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
                 <button type="submit" class="btn btn-primary btn-lg">
                     Subscribe

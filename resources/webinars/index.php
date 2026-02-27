@@ -29,7 +29,7 @@ $upcoming_webinars = [
         'level' => 'Intermediate',
         'attendees' => 347,
         'max_attendees' => 500,
-        'registration_url' => '/VattleyGlobal/contact/?inquiry=webinar',
+        'registration_url' => url('contact/?inquiry=webinar'),
         'featured' => true
     ],
     [
@@ -46,7 +46,7 @@ $upcoming_webinars = [
         'level' => 'All Levels',
         'attendees' => 289,
         'max_attendees' => 400,
-        'registration_url' => '/VattleyGlobal/contact/?inquiry=webinar',
+        'registration_url' => url('contact/?inquiry=webinar'),
         'featured' => true
     ],
     [
@@ -63,7 +63,7 @@ $upcoming_webinars = [
         'level' => 'Beginner',
         'attendees' => 412,
         'max_attendees' => 600,
-        'registration_url' => '/VattleyGlobal/contact/?inquiry=webinar',
+        'registration_url' => url('contact/?inquiry=webinar'),
         'featured' => false
     ],
     [
@@ -80,7 +80,7 @@ $upcoming_webinars = [
         'level' => 'Advanced',
         'attendees' => 198,
         'max_attendees' => 300,
-        'registration_url' => '/VattleyGlobal/contact/?inquiry=webinar',
+        'registration_url' => url('contact/?inquiry=webinar'),
         'featured' => false
     ]
 ];
@@ -309,6 +309,7 @@ include '../../includes/header.php';
                 <div class="ondemand-card">
                     <div class="ondemand-thumbnail">
                         <img src="<?php echo ASSETS_URL; ?>/images/<?php echo $webinar['thumbnail']; ?>" alt="<?php echo $webinar['title']; ?>">
+                        <span class="session-badge"><i class="fas fa-check-circle"></i> Session Completed</span>
                     </div>
 
                     <div class="ondemand-content">
@@ -358,8 +359,9 @@ include '../../includes/header.php';
             <p style="color: rgba(255,255,255,0.95); font-size: 1.2rem;">
                 Subscribe to receive notifications about upcoming webinars and exclusive learning opportunities
             </p>
-            <form class="newsletter-form-inline" method="POST" action="<?php echo url('resources/blog/newsletter-subscribe'); ?>">
+            <form class="newsletter-form-inline" method="POST" action="<?php echo url('resources/blog/newsletter-subscribe'); ?>" data-validate>
                 <?php echo csrf_field(); ?>
+                <input type="hidden" name="redirect_url" value="<?php echo current_url(); ?>">
                 <input type="email" name="email" placeholder="Enter your email address" required>
                 <button type="submit" class="btn btn-secondary">
                     <i class="fas fa-paper-plane"></i>
@@ -776,6 +778,21 @@ include '../../includes/header.php';
 
 .ondemand-card:hover .ondemand-thumbnail img {
     transform: scale(1.05);
+}
+
+.session-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .ondemand-content {

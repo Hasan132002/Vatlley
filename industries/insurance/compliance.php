@@ -123,18 +123,18 @@ include '../../includes/header.php';
     </div>
 </section>
 
-<!-- CTA -->
-<section class="section">
+<!-- CTA Section -->
+<section class="cta-section">
     <div class="container">
-        <div class="cta-box" style="text-align: center; max-width: 800px; margin: 0 auto; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; padding: 60px 40px; border-radius: 12px; color: white;">
-            <h2 style="color: white; margin-bottom: 20px;">Ensure Regulatory Compliance</h2>
-            <p style="font-size: 1.15rem; margin-bottom: 35px; color: rgba(255,255,255,0.95);">
-                Stay ahead of regulatory requirements with automated compliance monitoring.
-            </p>
-            <a href="<?php echo url('contact'); ?>" class="btn" style="background: white; color: var(--primary-color); padding: 12px 35px; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-                <i class="fas fa-comments"></i>
-                Schedule Demo
-            </a>
+        <div class="cta-content">
+            <h2>Ensure Regulatory Compliance</h2>
+            <p>Stay ahead of regulatory requirements with automated compliance monitoring.</p>
+            <div class="cta-buttons">
+                <a href="<?php echo url('contact'); ?>" class="btn btn-white btn-lg">
+                    <i class="fas fa-comments" style="margin-right: 8px;"></i>
+                    Schedule Demo
+                </a>
+            </div>
         </div>
     </div>
 </section>

@@ -675,15 +675,6 @@ include '../../includes/header.php';
                     </a>
                 </div>
 
-                <!-- Request Card -->
-                <div class="sidebar-card download-card">
-                    <h3>Request Case Study</h3>
-                    <p>Get the complete version of this case study</p>
-                    <a href="<?php echo url('contact'); ?>?inquiry=case-study" class="btn btn-primary btn-block">
-                        <i class="fas fa-envelope"></i>
-                        Request PDF
-                    </a>
-                </div>
 
                 <!-- Share Card -->
                 <!-- <div class="sidebar-card share-card">
@@ -779,8 +770,8 @@ include '../../includes/header.php';
                 </div>
             </div>
             <div class="cta-right">
-                <a href="<?php echo url('contact'); ?>" class="btn btn-secondary btn-lg">
-                    <i class="fas fa-calendar-alt"></i>
+                <a href="<?php echo url('contact'); ?>" class="btn btn-white btn-lg">
+                    <i class="fas fa-calendar-alt" style="margin-right: 8px;"></i>
                     Schedule a Consultation
                 </a>
             </div>
@@ -1074,7 +1065,7 @@ include '../../includes/header.php';
     position: relative;
     z-index: 1;
     border: 2px solid var(--primary-color);
-    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.2);
+    box-shadow: 0 2px 8px rgba(5, 130, 189, 0.2);
     transition: var(--transition);
 }
 
@@ -1095,7 +1086,7 @@ include '../../includes/header.php';
 
 .timeline-item:hover .timeline-content {
     border-color: var(--primary-color);
-    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.1);
+    box-shadow: 0 2px 8px rgba(5, 130, 189, 0.1);
 }
 
 .timeline-content p {

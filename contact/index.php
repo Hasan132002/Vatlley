@@ -128,7 +128,7 @@ include '../includes/header.php';
                 </div>
                 <?php endif; ?>
 
-                <form method="POST" action="" class="contact-form" id="contactForm">
+                <form method="POST" action="" class="contact-form" id="contactForm" data-validate>
                     <?php echo csrf_field(); ?>
 
                     <div class="form-row">
@@ -332,7 +332,7 @@ include '../includes/header.php';
 .form-control:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    box-shadow: 0 0 0 3px rgba(5, 130, 189, 0.1);
 }
 
 .form-control::placeholder {

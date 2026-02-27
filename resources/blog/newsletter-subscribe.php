@@ -10,9 +10,17 @@ require_once '../../includes/functions.php';
 
 // Determine redirect URL (back to referring page, or blog as fallback)
 $redirect_url = url('resources/blog');
-if (!empty($_SERVER['HTTP_REFERER'])) {
+
+// First check for hidden redirect_url field (most reliable)
+if (!empty($_POST['redirect_url'])) {
+    $posted_url = $_POST['redirect_url'];
+    // Validate: only allow same-site redirects (prevent open redirect)
+    if (strpos($posted_url, BASE_URL) === 0 || strpos($posted_url, '/') === 0) {
+        $redirect_url = $posted_url;
+    }
+} elseif (!empty($_SERVER['HTTP_REFERER'])) {
     $referer = $_SERVER['HTTP_REFERER'];
-    // Only allow redirects to our own site
+    // Validate referer is from same host
     if (strpos($referer, $_SERVER['HTTP_HOST']) !== false) {
         $redirect_url = $referer;
     }

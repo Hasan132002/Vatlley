@@ -5,19 +5,19 @@
 
 /* ========== CSS Variables ========== */
 :root {
-    /* Primary Colors - Light & Professional */
-    --primary-color: #4A90E2;           /* Soft Blue */
-    --primary-dark: #2E5F8D;            /* Darker Blue */
-    --primary-light: #7AB8F5;           /* Light Blue */
+    /* Primary Colors - Matches Logo (Dark Navy + Blue) */
+    --primary-color: #0582BD;           /* Main Blue */
+    --primary-dark: #0D2B4E;            /* Dark Navy (logo text) */
+    --primary-light: #2A9FD6;           /* Light Blue (hover states) */
 
     /* Secondary Colors */
-    --secondary-color: #2980B9;         /* Emerald Green */
-    --secondary-light: #7FD99A;         /* Light Green */
+    --secondary-color: #046A9A;         /* Deep Blue */
+    --secondary-light: #079CCE;         /* Medium Light Blue */
 
     /* Accent Colors */
-    --accent-color: #FF6B6B;            /* Coral */
-    --accent-orange: var(--primary-color);           /* Orange */
-    --accent-purple: #2980B9;           /* Purple */
+    --accent-color: #E74C3C;            /* Red */
+    --accent-orange: #E67E22;           /* Orange */
+    --accent-purple: #8E44AD;           /* Purple */
 
     /* Neutral Colors */
     --text-primary: #2C3E50;            /* Dark Gray */
@@ -46,6 +46,24 @@
     /* Font Families */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-heading: 'Poppins', 'Inter', sans-serif;
+}
+
+/* ========== Page Hero (Global) ========== */
+.page-hero {
+    position: relative;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(13,43,78,0.92) 0%, rgba(5,130,189,0.85) 100%);
+    z-index: 0;
+}
+
+.page-hero > .container {
+    position: relative;
+    z-index: 1;
 }
 
 /* ========== Reset & Base Styles ========== */
@@ -381,35 +399,142 @@ section.section.legal-content h3 {
 .btn-primary {
     background: var(--primary-color);
     color: white;
+    border: 2px solid var(--primary-color);
 }
 
-/* .btn-primary:hover {
-    background: white;
+.btn-primary:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: white;
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
-} */
+    box-shadow: 0 6px 20px rgba(5, 130, 189, 0.35);
+}
 
 .btn-secondary {
     background: white;
     color: var(--primary-color);
-    border:2px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
 }
 
-/* .btn-secondary:hover {
-    background: var(--bg-light);
+.btn-secondary:hover {
+    background: var(--primary-color);
+    color: white;
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
-} */
+    box-shadow: 0 6px 20px rgba(5, 130, 189, 0.25);
+}
 
 .btn-outline {
     background: transparent;
-    color: white;
-    border: 2px solid white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
 }
 
 .btn-outline:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(5, 130, 189, 0.25);
+}
+
+.btn-white {
     background: white;
     color: var(--primary-color);
+    border: 2px solid white;
+    font-weight: 600;
+}
+
+.btn-white:hover {
+    background: var(--bg-light);
+    color: var(--primary-dark);
+    border-color: var(--bg-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline-white {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    font-weight: 600;
+}
+
+.btn-outline-white:hover {
+    background: white;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.btn-sm {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+}
+
+.btn-lg {
+    padding: 16px 38px;
+    font-size: 1.05rem;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* ========== CTA Section (Dark Background) ========== */
+.cta-section {
+    background: linear-gradient(135deg, rgba(13,43,78,0.95) 0%, rgba(5,130,189,0.9) 100%);
+    padding: 80px 0;
+    color: white;
+}
+
+.cta-section .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-section h2 {
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+}
+
+.cta-section p {
+    font-size: 1.15rem;
+    margin-bottom: 35px;
+    color: rgba(255,255,255,0.95);
+}
+
+.cta-section .cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ========== Form Validation ========== */
+input.error,
+textarea.error,
+select.error {
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.15) !important;
+}
+
+.form-error {
+    color: var(--accent-color);
+    font-size: 0.82rem;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.form-error::before {
+    content: "\f06a";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 0.75rem;
 }
 
 /* ========== Cards ========== */
@@ -698,7 +823,7 @@ section:last-of-type {
     background: var(--bg-light);
     color: var(--primary-color);
     padding-left: 20px;
-    box-shadow: 0 2px 6px rgba(74, 144, 226, 0.1);
+    box-shadow: 0 2px 6px rgba(5, 130, 189, 0.1);
 }
 
 .nested-service-item:hover i {
@@ -784,7 +909,7 @@ section:last-of-type {
     background: var(--bg-light);
     border-color: var(--primary-color);
     transform: translateX(5px);
-    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.15);
+    box-shadow: 0 4px 12px rgba(5, 130, 189, 0.15);
 }
 
 .about-card-icon {
@@ -802,7 +927,7 @@ section:last-of-type {
 
 .about-card:hover .about-card-icon {
     transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(74, 144, 226, 0.3);
+    box-shadow: 0 4px 8px rgba(5, 130, 189, 0.3);
 }
 
 .about-card-icon i {
@@ -915,7 +1040,7 @@ section:last-of-type {
 .mega-menu-item > a:hover,
 .mega-menu-item .mega-menu-link:hover {
     background: var(--bg-light);
-    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.1);
+    box-shadow: 0 2px 8px rgba(5, 130, 189, 0.1);
 }
 
 .mega-menu-item > a:hover i,

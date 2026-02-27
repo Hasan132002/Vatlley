@@ -22,7 +22,7 @@ function url($path = '') {
  */
 function asset($path) {
     $url = ASSETS_URL . '/' . ltrim($path, '/');
-    $file = $_SERVER['DOCUMENT_ROOT'] . '/VattleyGlobal/assets/' . ltrim($path, '/');
+    $file = $_SERVER['DOCUMENT_ROOT'] . SITE_PATH . '/assets/' . ltrim($path, '/');
     if (file_exists($file)) {
         $url .= '?v=' . filemtime($file);
     }

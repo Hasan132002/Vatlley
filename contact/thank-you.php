@@ -244,7 +244,7 @@ include '../includes/header.php';
     align-items: center;
     justify-content: center;
     margin: 0 auto 20px;
-    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
+    box-shadow: 0 5px 15px rgba(5, 130, 189, 0.3);
 }
 
 .step-item h4 {

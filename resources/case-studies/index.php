@@ -30,7 +30,7 @@ $case_studies = [
             '$12M annual savings'
         ],
         'excerpt' => 'A leading national bank implemented VettlyGlobal\'s AI-powered fraud detection system to combat rising digital fraud. The results exceeded expectations with significant cost savings and improved customer trust.',
-        'image' => 'case-study-1.jpg',
+        'image' => 'AI-Powered-Fraud-Detection-Strategies.jpg',
         'published_date' => '2026-02-01',
         'read_time' => '8 min read'
     ],
@@ -49,7 +49,7 @@ $case_studies = [
             '3M patient records secured'
         ],
         'excerpt' => 'A multi-state healthcare network partnered with VettlyGlobal to streamline HIPAA compliance and protect sensitive patient data across 50+ facilities.',
-        'image' => 'case-study-2.jpg',
+        'image' => 'Healthcare-Data-Security-A-Comprehensive-Guide.jpg',
         'published_date' => '2026-01-20',
         'read_time' => '10 min read'
     ],
@@ -68,7 +68,7 @@ $case_studies = [
             '24-hour average settlement'
         ],
         'excerpt' => 'Leading auto insurance provider transformed their claims process using VettlyGlobal\'s automated verification and analytics platform, dramatically improving speed and accuracy.',
-        'image' => 'case-study-3.jpg',
+        'image' => 'Insurance-Analytics-Driving-Better-Outcomes.jpg',
         'published_date' => '2026-01-10',
         'read_time' => '7 min read'
     ],
@@ -87,7 +87,7 @@ $case_studies = [
             '$5M cost savings annually'
         ],
         'excerpt' => 'State government agency modernized their citizen identity verification process, reducing processing time and improving accuracy while maintaining security standards.',
-        'image' => 'case-study-4.jpg',
+        'image' => 'Government-Digital-Identity-Solutions.jpg',
         'published_date' => '2025-12-15',
         'read_time' => '9 min read'
     ],
@@ -106,7 +106,7 @@ $case_studies = [
             '200ms average decision time'
         ],
         'excerpt' => 'Major e-commerce platform integrated VettlyGlobal\'s real-time fraud prevention to protect customers and revenue without impacting the checkout experience.',
-        'image' => 'case-study-5.jpg',
+        'image' => 'Cybersecurity-for-Financial-institutions.jpg',
         'published_date' => '2025-12-01',
         'read_time' => '6 min read'
     ],
@@ -125,7 +125,7 @@ $case_studies = [
             'Cross-jurisdiction collaboration'
         ],
         'excerpt' => 'Metropolitan police department enhanced investigative capabilities with VettlyGlobal\'s comprehensive data and analytics platform, accelerating case resolution.',
-        'image' => 'case-study-6.jpg',
+        'image' => 'Data-Privacy-Regulations-A-Global-Overview.jpg',
         'published_date' => '2025-11-20',
         'read_time' => '8 min read'
     ],
@@ -144,7 +144,7 @@ $case_studies = [
             '20% reduction in costs'
         ],
         'excerpt' => 'National collections agency dramatically improved recovery rates and reduced costs using VettlyGlobal\'s skip tracing and contact strategy optimization.',
-        'image' => 'case-study-7.jpg',
+        'image' => 'Collections-&-Recovery-Maximizing-ROI.jpg',
         'published_date' => '2025-11-05',
         'read_time' => '7 min read'
     ],
@@ -163,7 +163,7 @@ $case_studies = [
             '100% regulatory compliance'
         ],
         'excerpt' => 'Fast-growing fintech startup scaled their KYC process from thousands to hundreds of thousands of monthly users while maintaining compliance and user experience.',
-        'image' => 'case-study-8.jpg',
+        'image' => 'KYC-Best-Practices-for-Financial-Institutions.jpg',
         'published_date' => '2025-10-25',
         'read_time' => '6 min read'
     ],
@@ -182,7 +182,7 @@ $case_studies = [
             'Complete supply chain visibility'
         ],
         'excerpt' => 'Global pharmaceutical company protected their supply chain from fraud and counterfeiting with comprehensive vendor verification and monitoring solutions.',
-        'image' => 'case-study-9.jpg',
+        'image' => 'Credit-Risk-Management-Best-Practices.jpg',
         'published_date' => '2025-10-10',
         'read_time' => '9 min read'
     ]
@@ -284,9 +284,7 @@ include '../../includes/header.php';
                          data-title="<?php echo strtolower($study['title']); ?>">
                     <div class="case-study-header">
                         <div class="case-study-image">
-                            <div class="placeholder-image">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
+                            <img src="<?php echo asset('images/' . $study['image']); ?>" alt="<?php echo clean($study['title']); ?>">
                         </div>
                         <div class="case-study-tags">
                             <span class="tag tag-industry"><?php echo $study['industry']; ?></span>
@@ -367,21 +365,18 @@ include '../../includes/header.php';
 </section>
 
 <!-- CTA Section -->
-<section class="cta-section section" style="background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));">
+<section class="cta-section">
     <div class="container">
-        <div class="cta-content text-center">
-            <i class="fas fa-rocket" style="font-size: 1.5rem; color: white; margin-bottom: 12px;"></i>
-            <h2 style="color: white; font-size: 1.6rem;">Ready to Write Your Success Story?</h2>
-            <p style="color: rgba(255,255,255,0.9); font-size: 1rem; max-width: 700px; margin: 0 auto 25px;">
-                Join hundreds of organizations that have transformed their risk management and achieved measurable results with VettlyGlobal.
-            </p>
+        <div class="cta-content">
+            <h2>Ready to Write Your Success Story?</h2>
+            <p>Join hundreds of organizations that have transformed their risk management and achieved measurable results with VettlyGlobal.</p>
             <div class="cta-buttons">
-                <a href="<?php echo url('contact'); ?>" class="btn btn-secondary btn-lg">
-                    <i class="fas fa-comments"></i>
+                <a href="<?php echo url('contact'); ?>" class="btn btn-white btn-lg">
+                    <i class="fas fa-comments" style="margin-right: 8px;"></i>
                     Schedule a Demo
                 </a>
                 <a href="<?php echo url('about-us'); ?>" class="btn btn-outline-white btn-lg">
-                    <i class="fas fa-info-circle"></i>
+                    <i class="fas fa-info-circle" style="margin-right: 8px;"></i>
                     Learn More
                 </a>
             </div>
@@ -472,7 +467,7 @@ include '../../includes/header.php';
 .filter-select:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    box-shadow: 0 0 0 3px rgba(5, 130, 189, 0.1);
 }
 
 /* Stats Section */
@@ -543,15 +538,18 @@ include '../../includes/header.php';
 
 .case-study-image {
     height: 200px;
-    background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
 }
 
-.placeholder-image {
-    font-size: 1.5rem;
-    color: rgba(255,255,255,0.3);
+.case-study-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.case-study-card:hover .case-study-image img {
+    transform: scale(1.05);
 }
 
 .case-study-tags {
@@ -732,29 +730,7 @@ include '../../includes/header.php';
     margin: 0;
 }
 
-/* CTA Section */
-.cta-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.btn-lg {
-    padding: 16px 40px;
-    font-size: 1.1rem;
-}
-
-.btn-outline-white {
-    background: transparent;
-    border: 2px solid white;
-    color: white;
-}
-
-.btn-outline-white:hover {
-    background: white;
-    color: var(--primary-color);
-}
+/* CTA Section - uses global .cta-section, .cta-content, .cta-buttons, .btn-white, .btn-outline-white */
 
 /* No Results */
 .no-results {

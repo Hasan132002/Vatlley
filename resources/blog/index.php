@@ -216,8 +216,9 @@ include '../../includes/header.php';
                 <div class="sidebar-widget sidebar-widget-newsletter">
                     <h4 class="widget-title">Newsletter</h4>
                     <p>Subscribe to get the latest blog posts and updates.</p>
-                    <form class="newsletter-form" method="POST" action="<?php echo url('resources/blog/newsletter-subscribe'); ?>">
+                    <form class="newsletter-form" method="POST" action="<?php echo url('resources/blog/newsletter-subscribe'); ?>" data-validate>
                         <?php echo csrf_field(); ?>
+                        <input type="hidden" name="redirect_url" value="<?php echo current_url(); ?>">
                         <input type="email" name="email" placeholder="Your email address" required>
                         <button type="submit" class="btn btn-primary">Subscribe</button>
                     </form>
@@ -248,7 +249,10 @@ include '../../includes/header.php';
         <div class="cta-content">
             <h2>Ready to Transform Your Business?</h2>
             <p>Get in touch with our experts to learn how VettlyGlobal can help your organization.</p>
-            <a href="<?php echo url('contact'); ?>" class="btn btn-primary">Contact Us Today</a>
+            <a href="<?php echo url('contact'); ?>" class="btn btn-white btn-lg">
+                <i class="fas fa-comments" style="margin-right: 8px;"></i>
+                Contact Us Today
+            </a>
         </div>
     </div>
 </section>
@@ -628,15 +632,7 @@ include '../../includes/header.php';
     margin-bottom: 30px;
 }
 
-.cta-content .btn {
-    background: white;
-    color: var(--primary-color);
-}
-
-.cta-content .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-xl);
-}
+/* CTA button uses global .btn-white class */
 
 /* Responsive */
 @media (max-width: 992px) {

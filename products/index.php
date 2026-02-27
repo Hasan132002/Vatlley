@@ -115,7 +115,7 @@ include '../includes/header.php';
 .filter-group input:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(74,144,226,0.1);
+    box-shadow: 0 0 0 3px rgba(5,130,189,0.1);
 }
 
 .search-input-wrapper {

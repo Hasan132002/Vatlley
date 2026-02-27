@@ -170,7 +170,7 @@ include '../../includes/header.php';
                 </div>
             </div>
 
-            <div style="background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; padding: 40px; border-radius: 12px; color: white;">
+            <div style="background: linear-gradient(135deg, var(--primary-dark), var(--primary-color)); padding: 40px; border-radius: 12px; color: white;">
                 <h3 style="margin-bottom: 30px;">Complete Analytics Suite</h3>
                 <ul style="list-style: none; padding: 0;">
                     <li style="padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; gap: 12px;">
@@ -316,20 +316,18 @@ include '../../includes/header.php';
 </section>
 
 <!-- CTA Section -->
-<section class="section" style="background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; color: white;">
+<section class="cta-section">
     <div class="container">
-        <div class="cta-box" style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <div class="cta-content">
             <h2>Transform Your Agency with Crime Analytics</h2>
-            <p style="font-size: 1.15rem; margin-bottom: 35px; color: rgba(255,255,255,0.95);">
-                Join hundreds of law enforcement agencies that are using predictive analytics to reduce crime, optimize resources, and keep communities safer.
-            </p>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="<?php echo url('contact'); ?>" class="btn" style="background: white; color: var(--primary-color); font-weight: 600; padding: 15px 40px; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-                    <i class="fas fa-comments"></i>
+            <p>Join hundreds of law enforcement agencies that are using predictive analytics to reduce crime, optimize resources, and keep communities safer.</p>
+            <div class="cta-buttons">
+                <a href="<?php echo url('contact'); ?>" class="btn btn-white btn-lg">
+                    <i class="fas fa-comments" style="margin-right: 8px;"></i>
                     Request Demo
                 </a>
-                <a href="<?php echo url('industries/law-enforcement'); ?>" class="btn" style="background: transparent; color: white; border: 2px solid white; font-weight: 600; padding: 13px 38px; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-                    <i class="fas fa-arrow-left"></i>
+                <a href="<?php echo url('industries/law-enforcement'); ?>" class="btn btn-outline-white btn-lg">
+                    <i class="fas fa-arrow-left" style="margin-right: 8px;"></i>
                     Back to Law Enforcement
                 </a>
             </div>

@@ -160,7 +160,7 @@ include '../../includes/header.php';
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 50px;">
             <div style="text-align: center;">
-                <div style="width: 80px; height: 80px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: white; font-size: 2rem; font-weight: bold;">
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: white; font-size: 2rem; font-weight: bold;">
                     1
                 </div>
                 <h3 style="margin-bottom: 15px;">Multi-Source Data Integration</h3>
@@ -170,7 +170,7 @@ include '../../includes/header.php';
             </div>
 
             <div style="text-align: center;">
-                <div style="width: 80px; height: 80px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: white; font-size: 2rem; font-weight: bold;">
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: white; font-size: 2rem; font-weight: bold;">
                     2
                 </div>
                 <h3 style="margin-bottom: 15px;">Whole-Person Analysis</h3>
@@ -180,7 +180,7 @@ include '../../includes/header.php';
             </div>
 
             <div style="text-align: center;">
-                <div style="width: 80px; height: 80px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: white; font-size: 2rem; font-weight: bold;">
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: white; font-size: 2rem; font-weight: bold;">
                     3
                 </div>
                 <h3 style="margin-bottom: 15px;">Coordinated Care Planning</h3>
@@ -190,7 +190,7 @@ include '../../includes/header.php';
             </div>
 
             <div style="text-align: center;">
-                <div style="width: 80px; height: 80px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: white; font-size: 2rem; font-weight: bold;">
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: white; font-size: 2rem; font-weight: bold;">
                     4
                 </div>
                 <h3 style="margin-bottom: 15px;">Outcomes & Continuous Improvement</h3>
@@ -269,19 +269,21 @@ include '../../includes/header.php';
 </section>
 
 <!-- CTA Section -->
-<section class="section" style="background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; color: white; padding: 60px 0;">
-    <div class="container" style="text-align: center;">
-        <h2 style="color: white; margin-bottom: 20px;">Deliver Whole-Person Care</h2>
-        <p style="color: rgba(255,255,255,0.95); margin-bottom: 30px; font-size: 1.1rem;">
-            Discover how VettlyGlobal's whole-person data solutions enable integrated care that improves outcomes and reduces costs.
-        </p>
-        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-            <a href="<?php echo url('contact'); ?>" class="btn" style="background: white; color: var(--primary-color); padding: 12px 30px; font-weight: 600;">
-                Request a Demo <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
-            </a>
-            <a href="<?php echo url('contact'); ?>" class="btn" style="background: transparent; color: white; border: 2px solid white; padding: 10px 30px; font-weight: 600;">
-                Contact Sales
-            </a>
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Deliver Whole-Person Care</h2>
+            <p>Discover how VettlyGlobal's whole-person data solutions enable integrated care that improves outcomes and reduces costs.</p>
+            <div class="cta-buttons">
+                <a href="<?php echo url('contact'); ?>" class="btn btn-white btn-lg">
+                    <i class="fas fa-comments" style="margin-right: 8px;"></i>
+                    Request a Demo
+                </a>
+                <a href="<?php echo url('contact'); ?>" class="btn btn-outline-white btn-lg">
+                    <i class="fas fa-arrow-right" style="margin-right: 8px;"></i>
+                    Contact Sales
+                </a>
+            </div>
         </div>
     </div>
 </section>

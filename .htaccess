@@ -2,7 +2,19 @@
 
 # Enable Rewrite Engine
 RewriteEngine On
+
+# DEPLOYMENT: Change to / for root domain deployment
 RewriteBase /VattleyGlobal/
+
+# Redirect to HTTPS (skips localhost and 127.0.0.1)
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} !^localhost$ [NC]
+RewriteCond %{HTTP_HOST} !^127\.0\.0\.1$ [NC]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove trailing slash (use relative path so RewriteBase applies correctly)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ $1 [L,R=301]
 
 # Clean URLs for slug-based detail pages (MUST come before .php extension rule)
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -31,14 +43,6 @@ RewriteRule ^products/([^/]+)/?$ products/product-detail.php?slug=$1 [L,QSA]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php [L]
-
-# Redirect to HTTPS (uncomment when SSL is ready)
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# Remove trailing slash (use relative path so RewriteBase applies correctly)
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)/$ $1 [L,R=301]
 
 # Set default directory index
 DirectoryIndex index.php index.html
@@ -89,5 +93,6 @@ Options -Indexes
 </FilesMatch>
 
 # Custom Error Pages
+# DEPLOYMENT: Change /VattleyGlobal to match SITE_PATH (or remove for root)
 ErrorDocument 404 /VattleyGlobal/404.php
 ErrorDocument 500 /VattleyGlobal/500.php

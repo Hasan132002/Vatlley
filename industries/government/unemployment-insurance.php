@@ -49,7 +49,7 @@ include '../../includes/header.php';
                     <a href="<?php echo url('resources'); ?>" class="btn btn-secondary">Learn More</a>
                 </div>
             </div>
-            <div style="background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; padding: 60px 40px; border-radius: 12px; color: white;">
+            <div style="background: linear-gradient(135deg, var(--primary-dark), var(--primary-color)); padding: 60px 40px; border-radius: 12px; color: white;">
                 <h3 style="margin-bottom: 25px;">Key Capabilities</h3>
                 <ul style="list-style: none; padding: 0;">
                     <li style="padding: 12px 0; padding-left: 30px; position: relative;">
@@ -89,7 +89,7 @@ include '../../includes/header.php';
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
             <!-- Identity Verification -->
             <div class="feature-card" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-id-card" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Identity Verification</h3>
@@ -114,7 +114,7 @@ include '../../includes/header.php';
 
             <!-- Fraud Detection -->
             <div class="feature-card" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-shield-alt" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Fraud Detection</h3>
@@ -139,7 +139,7 @@ include '../../includes/header.php';
 
             <!-- Employment Verification -->
             <div class="feature-card" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-briefcase" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Employment Verification</h3>
@@ -164,7 +164,7 @@ include '../../includes/header.php';
 
             <!-- Claim Management -->
             <div class="feature-card" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-file-alt" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Claim Management</h3>
@@ -189,7 +189,7 @@ include '../../includes/header.php';
 
             <!-- Cross-State Coordination -->
             <div class="feature-card" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-globe" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Cross-State Coordination</h3>
@@ -214,7 +214,7 @@ include '../../includes/header.php';
 
             <!-- Analytics & Reporting -->
             <div class="feature-card" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-chart-bar" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Analytics & Reporting</h3>
@@ -348,20 +348,18 @@ include '../../includes/header.php';
 </section>
 
 <!-- CTA Section -->
-<section class="section">
+<section class="cta-section">
     <div class="container">
-        <div class="cta-box" style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <div class="cta-content">
             <h2>Protect Your Unemployment Program</h2>
-            <p style="font-size: 1.15rem; margin-bottom: 35px;">
-                Deploy comprehensive unemployment insurance solutions to prevent fraud, streamline processing, and protect state funds.
-            </p>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="<?php echo url('contact'); ?>" class="btn btn-primary btn-lg">
-                    <i class="fas fa-comments"></i>
+            <p>Deploy comprehensive unemployment insurance solutions to prevent fraud, streamline processing, and protect state funds.</p>
+            <div class="cta-buttons">
+                <a href="<?php echo url('contact'); ?>" class="btn btn-white btn-lg">
+                    <i class="fas fa-comments" style="margin-right: 8px;"></i>
                     Schedule a Demo
                 </a>
-                <a href="<?php echo url('industries/government'); ?>" class="btn btn-secondary btn-lg">
-                    <i class="fas fa-arrow-left"></i>
+                <a href="<?php echo url('industries/government'); ?>" class="btn btn-outline-white btn-lg">
+                    <i class="fas fa-arrow-left" style="margin-right: 8px;"></i>
                     Back to Government
                 </a>
             </div>

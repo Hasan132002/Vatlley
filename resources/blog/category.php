@@ -221,8 +221,9 @@ include '../../includes/header.php';
                 <div class="sidebar-widget sidebar-widget-newsletter">
                     <h4 class="widget-title">Newsletter</h4>
                     <p>Subscribe to get the latest blog posts and updates.</p>
-                    <form class="newsletter-form" method="POST" action="<?php echo url('resources/blog/newsletter-subscribe'); ?>">
+                    <form class="newsletter-form" method="POST" action="<?php echo url('resources/blog/newsletter-subscribe'); ?>" data-validate>
                         <?php echo csrf_field(); ?>
+                        <input type="hidden" name="redirect_url" value="<?php echo current_url(); ?>">
                         <input type="email" name="email" placeholder="Your email address" required>
                         <button type="submit" class="btn btn-primary">Subscribe</button>
                     </form>

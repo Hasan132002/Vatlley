@@ -25,7 +25,7 @@ $upcoming_events = [
         'type' => 'Conference',
         'description' => 'Join industry leaders for three days of insights on risk management, fraud detection, and data intelligence strategies.',
         'image' => 'event-1.jpg',
-        'registration_url' => '/VattleyGlobal/contact/',
+        'registration_url' => url('contact'),
         'price' => 'Free',
         'capacity' => '500',
         'registered' => '347'
@@ -40,7 +40,7 @@ $upcoming_events = [
         'type' => 'Workshop',
         'description' => 'Learn best practices for protecting healthcare data and ensuring HIPAA compliance in the digital age.',
         'image' => 'event-2.jpg',
-        'registration_url' => '/VattleyGlobal/contact/',
+        'registration_url' => url('contact'),
         'price' => 'Free',
         'capacity' => '200',
         'registered' => '156'
@@ -55,7 +55,7 @@ $upcoming_events = [
         'type' => 'Forum',
         'description' => 'Explore the latest regulatory changes and compliance strategies for financial institutions.',
         'image' => 'event-3.jpg',
-        'registration_url' => '/VattleyGlobal/contact/',
+        'registration_url' => url('contact'),
         'price' => 'Free',
         'capacity' => '150',
         'registered' => '89'
@@ -70,7 +70,7 @@ $upcoming_events = [
         'type' => 'Webinar',
         'description' => 'Discover how artificial intelligence and machine learning are revolutionizing fraud detection and prevention.',
         'image' => 'event-4.jpg',
-        'registration_url' => '/VattleyGlobal/contact/',
+        'registration_url' => url('contact'),
         'price' => 'Free',
         'capacity' => '300',
         'registered' => '234'
@@ -306,8 +306,9 @@ include '../../includes/header.php';
             <i class="fas fa-bell" style="font-size: 3rem; color: white; margin-bottom: 20px;"></i>
             <h2 style="color: white;">Never Miss an Event</h2>
             <p style="color: rgba(255,255,255,0.95);">Subscribe to our newsletter to receive updates about upcoming events, webinars, and exclusive opportunities.</p>
-            <form class="newsletter-form-inline" method="POST" action="<?php echo url('resources/blog/newsletter-subscribe'); ?>">
+            <form class="newsletter-form-inline" method="POST" action="<?php echo url('resources/blog/newsletter-subscribe'); ?>" data-validate>
                 <?php echo csrf_field(); ?>
+                <input type="hidden" name="redirect_url" value="<?php echo current_url(); ?>">
                 <input type="email" name="email" placeholder="Enter your email address" required>
                 <button type="submit" class="btn btn-secondary">
                     <i class="fas fa-envelope"></i>
@@ -431,7 +432,7 @@ section.events-cta::before {
 .filter-search:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    box-shadow: 0 0 0 3px rgba(5, 130, 189, 0.1);
 }
 
 /* Events Grid */

@@ -49,7 +49,7 @@ include '../../includes/header.php';
                     <a href="<?php echo url('resources'); ?>" class="btn btn-secondary">Learn More</a>
                 </div>
             </div>
-            <div style="background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; padding: 60px 40px; border-radius: 12px; color: white;">
+            <div style="background: linear-gradient(135deg, var(--primary-dark), var(--primary-color)); padding: 60px 40px; border-radius: 12px; color: white;">
                 <h3 style="margin-bottom: 25px;">Key Capabilities</h3>
                 <ul style="list-style: none; padding: 0;">
                     <li style="padding: 12px 0; padding-left: 30px; position: relative;">
@@ -89,7 +89,7 @@ include '../../includes/header.php';
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
             <!-- Disease Surveillance -->
             <div class="feature-card" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-microscope" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Disease Surveillance</h3>
@@ -114,7 +114,7 @@ include '../../includes/header.php';
 
             <!-- Population Health Analytics -->
             <div class="feature-card" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-chart-area" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Population Health Analytics</h3>
@@ -139,7 +139,7 @@ include '../../includes/header.php';
 
             <!-- Risk Stratification -->
             <div class="feature-card" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-layer-group" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Risk Stratification</h3>
@@ -164,7 +164,7 @@ include '../../includes/header.php';
 
             <!-- Health Promotion -->
             <div class="feature-card" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-heart" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Health Promotion Analytics</h3>
@@ -189,7 +189,7 @@ include '../../includes/header.php';
 
             <!-- Emergency Response -->
             <div class="feature-card" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-exclamation-circle" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Emergency Response Analytics</h3>
@@ -214,7 +214,7 @@ include '../../includes/header.php';
 
             <!-- Social Determinants -->
             <div class="feature-card" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-home" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Social Determinants Integration</h3>
@@ -348,20 +348,18 @@ include '../../includes/header.php';
 </section>
 
 <!-- CTA Section -->
-<section class="section">
+<section class="cta-section">
     <div class="container">
-        <div class="cta-box" style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <div class="cta-content">
             <h2>Improve Population Health</h2>
-            <p style="font-size: 1.15rem; margin-bottom: 35px;">
-                Deploy advanced public health analytics to track disease trends, prevent outbreaks, and improve population health outcomes.
-            </p>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="<?php echo url('contact'); ?>" class="btn btn-primary btn-lg">
-                    <i class="fas fa-comments"></i>
+            <p>Deploy advanced public health analytics to track disease trends, prevent outbreaks, and improve population health outcomes.</p>
+            <div class="cta-buttons">
+                <a href="<?php echo url('contact'); ?>" class="btn btn-white btn-lg">
+                    <i class="fas fa-comments" style="margin-right: 8px;"></i>
                     Schedule a Demo
                 </a>
-                <a href="<?php echo url('industries/government'); ?>" class="btn btn-secondary btn-lg">
-                    <i class="fas fa-arrow-left"></i>
+                <a href="<?php echo url('industries/government'); ?>" class="btn btn-outline-white btn-lg">
+                    <i class="fas fa-arrow-left" style="margin-right: 8px;"></i>
                     Back to Government
                 </a>
             </div>

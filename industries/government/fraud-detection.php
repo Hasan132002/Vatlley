@@ -49,7 +49,7 @@ include '../../includes/header.php';
                     <a href="<?php echo url('resources'); ?>" class="btn btn-secondary">Learn More</a>
                 </div>
             </div>
-            <div style="background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; padding: 60px 40px; border-radius: 12px; color: white;">
+            <div style="background: linear-gradient(135deg, var(--primary-dark), var(--primary-color)); padding: 60px 40px; border-radius: 12px; color: white;">
                 <h3 style="margin-bottom: 25px;">Key Capabilities</h3>
                 <ul style="list-style: none; padding: 0;">
                     <li style="padding: 12px 0; padding-left: 30px; position: relative;">
@@ -89,7 +89,7 @@ include '../../includes/header.php';
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
             <!-- Benefit Fraud Detection -->
             <div class="feature-card" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-exclamation-triangle" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Benefit Fraud Detection</h3>
@@ -114,7 +114,7 @@ include '../../includes/header.php';
 
             <!-- Pattern Analysis -->
             <div class="feature-card" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-chart-area" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Pattern Analysis</h3>
@@ -139,7 +139,7 @@ include '../../includes/header.php';
 
             <!-- Duplicate Detection -->
             <div class="feature-card" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-copy" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Duplicate Benefit Detection</h3>
@@ -164,7 +164,7 @@ include '../../includes/header.php';
 
             <!-- Real-Time Monitoring -->
             <div class="feature-card" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-eye" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Real-Time Monitoring</h3>
@@ -189,7 +189,7 @@ include '../../includes/header.php';
 
             <!-- Network Analysis -->
             <div class="feature-card" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-project-diagram" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Network Analysis</h3>
@@ -214,7 +214,7 @@ include '../../includes/header.php';
 
             <!-- Compliance & Reporting -->
             <div class="feature-card" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-file-contract" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Investigation Tools</h3>
@@ -352,20 +352,18 @@ include '../../includes/header.php';
 </section>
 
 <!-- CTA Section -->
-<section class="section">
+<section class="cta-section">
     <div class="container">
-        <div class="cta-box" style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <div class="cta-content">
             <h2>Protect Your Agency from Fraud</h2>
-            <p style="font-size: 1.15rem; margin-bottom: 35px;">
-                Deploy advanced fraud detection to identify suspicious activity, prevent improper payments, and save millions in fraud losses.
-            </p>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="<?php echo url('contact'); ?>" class="btn btn-primary btn-lg">
-                    <i class="fas fa-comments"></i>
+            <p>Deploy advanced fraud detection to identify suspicious activity, prevent improper payments, and save millions in fraud losses.</p>
+            <div class="cta-buttons">
+                <a href="<?php echo url('contact'); ?>" class="btn btn-white btn-lg">
+                    <i class="fas fa-comments" style="margin-right: 8px;"></i>
                     Schedule a Demo
                 </a>
-                <a href="<?php echo url('industries/government'); ?>" class="btn btn-secondary btn-lg">
-                    <i class="fas fa-arrow-left"></i>
+                <a href="<?php echo url('industries/government'); ?>" class="btn btn-outline-white btn-lg">
+                    <i class="fas fa-arrow-left" style="margin-right: 8px;"></i>
                     Back to Government
                 </a>
             </div>

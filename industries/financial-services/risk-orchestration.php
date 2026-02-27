@@ -60,7 +60,7 @@ include '../../includes/header.php';
         <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
             <!-- Feature 1 -->
             <div class="feature-item" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-poll" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Unified Customer Risk Scoring</h3>
@@ -71,7 +71,7 @@ include '../../includes/header.php';
 
             <!-- Feature 2 -->
             <div class="feature-item" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-cogs" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Orchestrated Decision Engine</h3>
@@ -82,7 +82,7 @@ include '../../includes/header.php';
 
             <!-- Feature 3 -->
             <div class="feature-item" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-tasks" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Integrated Case Management</h3>
@@ -93,7 +93,7 @@ include '../../includes/header.php';
 
             <!-- Feature 4 -->
             <div class="feature-item" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-bell" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Multi-Domain Alert Orchestration</h3>
@@ -104,7 +104,7 @@ include '../../includes/header.php';
 
             <!-- Feature 5 -->
             <div class="feature-item" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-exchange-alt" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Real-Time Policy Enforcement</h3>
@@ -115,7 +115,7 @@ include '../../includes/header.php';
 
             <!-- Feature 6 -->
             <div class="feature-item" style="background: white; padding: 35px; border-radius: 12px; box-shadow: var(--shadow-md);">
-                <div style="width: 60px; height: 60px; background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                     <i class="fas fa-chart-line" style="font-size: 1.8rem; color: white;"></i>
                 </div>
                 <h3 style="margin-bottom: 15px;">Analytics & Reporting</h3>
@@ -242,20 +242,18 @@ include '../../includes/header.php';
 </section>
 
 <!-- CTA Section -->
-<section class="section" style="background: url('<?php echo ASSETS_URL; ?>/images/product-img.jpg') center center / cover no-repeat; color: white;">
+<section class="cta-section">
     <div class="container">
-        <div class="cta-box" style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <h2 style="color: white; margin-bottom: 20px;">Orchestrate Your Risk Management</h2>
-            <p style="font-size: 1.15rem; margin-bottom: 35px; color: rgba(255,255,255,0.95);">
-                Integrate risk management across your entire organization. Unified risk scoring and orchestrated decision-making for consistent risk mitigation and better outcomes.
-            </p>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="<?php echo url('contact'); ?>" class="btn" style="background: white; color: var(--primary-color); font-weight: 600; padding: 12px 32px; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-                    <i class="fas fa-calendar"></i>
+        <div class="cta-content">
+            <h2>Orchestrate Your Risk Management</h2>
+            <p>Integrate risk management across your entire organization. Unified risk scoring and orchestrated decision-making for consistent risk mitigation and better outcomes.</p>
+            <div class="cta-buttons">
+                <a href="<?php echo url('contact'); ?>" class="btn btn-white btn-lg">
+                    <i class="fas fa-comments" style="margin-right: 8px;"></i>
                     Schedule Demo
                 </a>
-                <a href="<?php echo url('resources'); ?>" class="btn" style="background: transparent; border: 2px solid white; color: white; font-weight: 600; padding: 10px 30px; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-                    <i class="fas fa-book"></i>
+                <a href="<?php echo url('resources'); ?>" class="btn btn-outline-white btn-lg">
+                    <i class="fas fa-book" style="margin-right: 8px;"></i>
                     View Resources
                 </a>
             </div>
