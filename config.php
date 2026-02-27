@@ -15,9 +15,9 @@ date_default_timezone_set('America/New_York');
 
 // Database Configuration
 define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'vettlyglobal_db');
+define('DB_USER', 'vettlyuser');
+define('DB_PASS', 'StrongPassword123!');
+define('DB_NAME', 'vettlyglobal');
 
 // === DEPLOYMENT SETTINGS ===
 // SITE_PATH: Change based on your deployment
